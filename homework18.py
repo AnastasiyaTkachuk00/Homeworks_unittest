@@ -10,8 +10,8 @@ class TestTriangleUnit(unittest.TestCase):
         self.second = Triangle(7, 8, 9)
 
     def test_triangle_eq(self):
-        first = Triangle(9, 7, 9)
-        second = Triangle(9, 7, 9)
+        first = Triangle(9, 9, 9)
+        second = Triangle(9, 9, 9)
         self.assertEqual(self.first, second)
 
     def test_triangle_ne(self):
@@ -37,6 +37,13 @@ class TestTriangleUnit(unittest.TestCase):
 
     def test_perimetr(self):
         self.assertEqual(self.first.perimetr(), 25)
+
+    def test_is_right_triangle(self):
+        self.a = 22
+        self.b = 22
+        self.c = 44
+        right_tr = self.a + self.b
+        self.assertEqual(right_tr, self.c)
 
 
 if __name__ == '__main__':
